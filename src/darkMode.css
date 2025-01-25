@@ -1,0 +1,75 @@
+body.dark-mode {
+  background-color: #050505;
+
+  .searchForm {
+    background-color: #1f1f1f;
+    border: 1px solid #1f1f1f;
+  }
+
+  .searchForm:focus-within {
+    border: 1px solid #a445ed;
+  }
+
+  .searchInput {
+    background-color: #1f1f1f !important;
+  }
+
+  .selectedFonts {
+    color: #ffffff;
+  }
+
+  input {
+    color: #ffffff;
+  }
+
+  h4 {
+    color: #ffffff;
+  }
+
+  .playButton {
+    background-color: #2d1540;
+  }
+
+  .playButton:hover {
+    background-color: #3f2158;
+  }
+
+  h3 {
+    color: #ffffff;
+  }
+
+  .type span {
+    background-color: #3a3a3a;
+  }
+
+  h5 {
+    color: #757575;
+  }
+
+  .definition {
+    color: #ffffff;
+  }
+
+  .sourceUrl {
+    border-top: 1px solid #3a3a3a;
+  }
+
+  .sourceUrl a {
+    color: #ffffff;
+  }
+
+  .dropdownMenu {
+    background-color: #1f1f1f;
+    box-shadow: 0px 5px 30px 0px #a445ed;
+    border-radius: 16px;
+    border: none;
+  }
+
+  .dropdownItem {
+    color: #ffffff;
+  }
+
+  .noWordMessage h6 {
+    color: #ffffff;
+  }
+}
