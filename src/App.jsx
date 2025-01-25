@@ -33,9 +33,24 @@ function App() {
     setInput(searchInput);
   }
 
+  function getAudioUrl(phonetics) {
+    if (!phonetics || phonetics.length === 0) return null;
+
+    const audioData = phonetics.find(
+      (phonetic) => phonetic.audio && phonetic.audio.trim() !== ""
+    );
+    return audioData ? audioData.audio : null;
+  }
+
   function playAudio(audioUrl) {
+    if (!audioUrl) {
+      console.error("No valid audio URL found.");
+      return;
+    }
     const audio = new Audio(audioUrl);
-    audio.play();
+    audio.play().catch((error) => {
+      console.error("Audio playback failed:", error);
+    });
   }
 
   useEffect(() => {
@@ -177,7 +192,7 @@ function App() {
               <p>{word[0]?.phonetics[1]?.text}</p>
             </div>
             <button
-              onClick={() => playAudio(word[0]?.phonetics[1]?.audio)}
+              onClick={() => playAudio(getAudioUrl(word[0]?.phonetics))}
               className="playButton"
             >
               <img src="./audioPlayBtn.svg" />
